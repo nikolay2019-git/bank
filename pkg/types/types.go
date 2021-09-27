@@ -29,6 +29,13 @@ type Card struct {
 }
 
 type Category string
+type Status string
+
+const (
+	StatusOk         Status = "OK"
+	StatusFail       Status = "Fail"
+	StatusInProgress Status = "INPROGRESS"
+)
 
 type Payment struct {
 	ID       int
@@ -40,4 +47,5 @@ type PaymentSource struct {
 	Type    string //'card'
 	Number  string // номер вида "5058 xxxx xxxx 8888"
 	Balance Money  // Баланс в дирамах
+	Status  Status
 }
