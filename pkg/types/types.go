@@ -41,11 +41,12 @@ type Payment struct {
 	ID       int
 	Amount   Money
 	Category Category
+	Status   Status
 }
 
 type PaymentSource struct {
 	Type    string //'card'
 	Number  string // номер вида "5058 xxxx xxxx 8888"
 	Balance Money  // Баланс в дирамах
-	Status  Status
+
 }
